@@ -17,7 +17,7 @@ const validateToken = (req, res, next) => {
         
       return res.status(401).json({ message: "Access Denied" });
     }
-    const decryptObj = jwt.verify(token, process.env.TOKEN_SECRET);
+    const decryptObj = jwt.verify(token,"Suba");
     req.user = decryptObj;
     req.token = token;
     next();
