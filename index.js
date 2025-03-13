@@ -14,7 +14,9 @@ connectMongoDB();
 
 app.use(bodyParser.json());
 
-app.use(cors({ origin:"", credentials: true }));
+app.use(
+  cors({ origin: "https://fronendfinal.netlify.app", credentials: true })
+);
 
 app.get("/", (req, res) => {
   res.send("Server running successfully!!!");
