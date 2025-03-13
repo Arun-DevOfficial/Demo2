@@ -20,3 +20,10 @@ app.get("/", (req, res) => {
   res.send("Server running successfully!!!");
 });
 
+//App Routes
+app.use("/user", userRouter);
+app.use("/post", postRouter);
+
+app.listen(3000, () => {
+  console.log(`Server Running Successfully at 3000`);
+});
